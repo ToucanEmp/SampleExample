@@ -1,5 +1,7 @@
 package com.example.gitexample.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,9 @@ public class MyService {
 	
 	public void deleteEmp(long emp_id) {
 		myRepository.deleteById(emp_id);
+	}
+	public Optional<MyEntity> findEmp(long emp_id) {
+		return myRepository.findById(emp_id);
 	}
 	
 
