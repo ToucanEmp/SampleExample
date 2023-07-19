@@ -28,6 +28,9 @@ public class MyService {
 	public List<MyEntity> getAll() {
 		return myRepository.findAll();
 	}
+	public Boolean exists(long emp_id) {
+		return myRepository.existsById(emp_id);
+	}
 	
 
 }
