@@ -1,5 +1,6 @@
 package com.example.gitexample.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,10 @@ public class MyController {
 	@GetMapping("/getById/{emp_id}")
 	public Optional<MyEntity> findEmp(@PathVariable long emp_id) {
 		return myService.findEmp(emp_id);
+	}
+	@GetMapping("/getAll")
+	public List<MyEntity> getAll() {
+		return myService.getAll();
 	}
 
 }

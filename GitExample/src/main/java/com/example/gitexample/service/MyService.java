@@ -1,5 +1,6 @@
 package com.example.gitexample.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,10 @@ public class MyService {
 	}
 	public Optional<MyEntity> findEmp(long emp_id) {
 		return myRepository.findById(emp_id);
+	}
+	
+	public List<MyEntity> getAll() {
+		return myRepository.findAll();
 	}
 	
 
