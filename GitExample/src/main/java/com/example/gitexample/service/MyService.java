@@ -15,5 +15,9 @@ public class MyService {
 		return myRepository.save(entity);
 	}
 	
+	public void deleteEmp(long emp_id) {
+		myRepository.deleteById(emp_id);
+	}
+	
 
 }
