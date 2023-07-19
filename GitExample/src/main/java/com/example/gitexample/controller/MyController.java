@@ -46,9 +46,9 @@ public class MyController {
 		MyEntity updateEmployee = myRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id: " + id));
 
-        updateEmployee.setEmp_dept(employeeDetails.getEmp_dept());
+        updateEmployee.setDept(employeeDetails.getDept());
         updateEmployee.setEmp_name(employeeDetails.getEmp_name());
-        updateEmployee.setEmp_dept(employeeDetails.getEmp_dept());
+       
 
         myRepository.save(updateEmployee);
 
@@ -57,6 +57,11 @@ public class MyController {
 	@GetMapping("/exists/{emp_id}")
 	public Boolean exists(@PathVariable long emp_id) {
 		return myService.exists(emp_id);
+	}
+	
+	@GetMapping("/getbydept/{dept}")
+	public List<MyEntity> getbydept(@PathVariable String dept) {
+		return myService.findByDept(dept);
 	}
 
 }

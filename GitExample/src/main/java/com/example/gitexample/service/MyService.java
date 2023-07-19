@@ -31,6 +31,9 @@ public class MyService {
 	public Boolean exists(long emp_id) {
 		return myRepository.existsById(emp_id);
 	}
+	public List<MyEntity> findByDept(String dept){
+		return myRepository.findByDept(dept);
+	}
 	
 
 }
