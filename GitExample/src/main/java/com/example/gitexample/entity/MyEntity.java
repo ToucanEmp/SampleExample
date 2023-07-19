@@ -14,6 +14,6 @@ public class MyEntity {
 	@Id
 	private long emp_id; 
 	private String emp_name;
-	private String emp_dept;
+	private String dept;
 
 }
