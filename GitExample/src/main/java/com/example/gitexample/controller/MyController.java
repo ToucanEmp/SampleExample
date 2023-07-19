@@ -54,5 +54,9 @@ public class MyController {
 
         return ResponseEntity.ok(updateEmployee);
     }
+	@GetMapping("/exists/{emp_id}")
+	public Boolean exists(@PathVariable long emp_id) {
+		return myService.exists(emp_id);
+	}
 
 }
