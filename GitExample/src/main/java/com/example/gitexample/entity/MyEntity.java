@@ -15,5 +15,6 @@ public class MyEntity {
 	private long emp_id; 
 	private String emp_name;
 	private String dept;
+	private int emp_age;
 
 }

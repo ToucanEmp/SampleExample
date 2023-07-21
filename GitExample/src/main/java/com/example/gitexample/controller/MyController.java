@@ -48,7 +48,7 @@ public class MyController {
 
         updateEmployee.setDept(employeeDetails.getDept());
         updateEmployee.setEmp_name(employeeDetails.getEmp_name());
-       
+        updateEmployee.setEmp_age(employeeDetails.getEmp_age());
 
         myRepository.save(updateEmployee);
 
